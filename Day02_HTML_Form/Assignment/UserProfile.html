@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>User Profile</title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <td align="right"><b>Last Name</b></td>
+                <td colspan="3"><input type="text" size="35"></td>
+            </tr>
+            <tr>
+                <td align="right"><b>First Name</b></td>
+                <td colspan="3">
+                    <input type="text" size="35"></td>
+            </tr>
+            <tr>
+                <td align="right"><b>Address</b></td>
+                <td colspan="3">
+                    <textarea rows="4" cols="34"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><b>City</b></td>
+                <td><input type="text"></td>
+                <td><b>State</b></td>
+                <td><input type="text" size="10"></td>
+            </tr>
+            <tr>
+                <td align="right"><b>Zip/Postal Code</b></td>
+                <td colspan="3"><input type="text"></td>
+            </tr>
+            <tr>
+                <td align="right"><b>Country</b></td>
+                <td colspan="3">
+                    <select>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="India">India</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><b>Phone (country code,<br>area code, number)</b></td>
+                <td colspan="3">
+                    (+ <input type="text" size="1">) <input type="text" size="1"> - <input type="text" size="10">
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><b>E-mail</b></td>
+                <td colspan="3"><input type="email" size="35"></td>
+            </tr>
+            <tr>
+                <td align="right"><b>Birth date</b></td>
+                <td colspan="3">
+                    Month <input type="text" maxlength="2" size="1">
+                    Day <input type="text" maxlength="2" size="1">
+                    Year <input type="text" maxlength="4" size="2"> 
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><b>Gender</b></td>
+                <td colspan="3">
+                    <select>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="O">Others</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><b>Starting date</b></td>
+                <td colspan="3">
+                    <input type="radio" name="sDate">Spring 2006
+                    <input type="radio" name="sDate">Summer 2006
+                </td>
+            </tr>
+            <tr>
+                <td align="right"><b>Comments/Questions</b></td>
+                <td colspan="3">
+                    <textarea rows="8" cols="34"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="4" bgcolor = "#b2d3c2">
+                    <button>Submit</button>
+                    <button>Clear This Form</button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
