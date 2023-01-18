@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>RegisterPage CSS</title>
+        <style>
+            body{
+                 background-color: rgb(35 44 50 / 93%);
+            }
+            .main-block{
+                width: 350px;
+                margin-top: 100px;
+                margin-left: 500px;
+                text-align: center;
+                padding: 30px;
+                background-color: rgb(35 44 50 / 0%);
+            }
+            .title{
+                font-size: 50px;
+                color:  grey;
+                font-family: monospace;
+            }
+            .input-control{
+                margin-bottom: 20px;
+                padding: 15px;
+                width: 260px;
+                border: 0px;
+                font-size: 20px;
+                background-color: rgb(35 44 50 / 0%);
+                border-bottom: 1px solid grey;
+            }
+            .btn{
+                width: 282px;
+                padding: 15px;
+                border: 0px;
+                font-size: 15px;
+                background-color: rgb(132, 237, 108);
+                color: white;
+                margin-bottom: 20px;
+            }
+            .acc{
+                color:  grey;
+                border: 0px;
+                background-color:rgb(35 44 50 / 0%);
+                
+            }
+            .rules{
+                text-align: left;
+                padding-left: 10px;
+                color:  grey;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-block">
+            <p class="title">Register</p>
+            <input class="input-control" type="text" placeholder="Username">
+            <br>
+            <input class="input-control" type="text" placeholder="password">
+            <br>
+            <input class="input-control" type="text" placeholder="E-mail Address">
+            <br>
+            <div class="rules">
+            <input type="radio" name="rules"> Accept rules and conditions
+            </div>
+            <br>
+            <button class="btn" type="submit">Register</button>
+            <br>
+            <button type="submit" class="acc">Already have an account?</button>        
+        </div>
+    </body>
+</html>

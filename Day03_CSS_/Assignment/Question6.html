@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Registeration details</title>
+        <style>
+        body{
+            background-color: rgb(1, 97, 161);
+        }
+        .table1{
+            margin-top: 100px;
+            margin-left: 475px;
+            color: white;
+
+        }
+        .field{
+            color: white;
+            margin: 0px;
+        }
+        .buttons{
+            background-color: rgb(72, 163, 47);
+            color: white;
+            border: 0.5px solid rgb(91, 90, 90);
+            border-radius: 20px;
+            font-size: 25px;
+        }
+        .row1{
+            margin: 0px;
+        }
+        </style>
+    </head>
+    <body>
+        <table  class = "table1" height = "500" width = "300">
+            <tr class = "row1">
+                <td height = "80">
+                    <fieldset class="field">
+                        <legend >Registeration Details</legend>
+                        <table  class = "row1" height = "300" width = "500" cellpadding = "5"  >
+                            <tr>
+                                <td align="right">
+                                    University :
+                                </td>
+                                <td width = "300">
+                                    <input type="text" size="20">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    Institute : 
+                                </td>
+                                <td>
+                                    <input type="text" size="20">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    Branch : 
+                                </td>
+                                <td>
+                                    <select >
+                                        <option value="" style="display:none">--Select--</option>
+                                        <option value="Mechanical">Mechanical</option>
+                                        <option value="civil">Civil</option>          
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    Degree :
+                                </td>
+                                <td>
+                                    <select>
+                                        <option value="" style="display:none">--Select--</option>
+                                        <option value="BE">BE</option>
+                                        <option value="BTech">BTech</option>
+                                        <option value="BPharm">Bpharm</option>
+                                    </select>
+                                    <input type="radio" name="courseStatus"> Pursuing
+                                    <input type="radio" name="courseStatus"> Completed
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    Average CPI :
+                                </td>
+                                <td>
+                                    <input type="number" width="1"> Upto <input type="number" width="1">Th Semester
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    Experiance : 
+                                </td>
+                            <td>
+                                <input type="number">Years 
+                            </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    Your Website or Blog : 
+                                </td>
+                                <td>
+                                    <input type="url">
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" height ="30">
+                    <button class="buttons"><</button> Step 2
+                    <button class="buttons">></button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
