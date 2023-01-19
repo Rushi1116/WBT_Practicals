@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flex box</title>
+        <style>
+            .container{
+                border: 1px solid black;
+                height: 550px;
+                width: 900px;
+                /*flex must be applied on parent block */
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 30px;
+                justify-content: space-evenly;
+                align-items: flex-end;
+                align-content:space-between;
+               
+            }
+            .product{
+                border: 1px solid black;
+                height: 100px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+        <div class="product">Product 1</div>
+        <div class="product">Product 2</div>
+        <div class="product">Product 3</div>
+        <div class="product">Product 4</div>
+        <div class="product">Product 5</div>
+        <!-- <div class="product">Product 6</div>
+        <div class="product">Product 7</div>
+        <div class="product">Product 8</div>
+        <div class="product">Product 9</div>
+        <div class="product">Product 10</div>
+        <div class="product">Product 11</div>
+        <div class="product">Product 12</div>
+        <div class="product">Product 13</div>
+        <div class="product">Product 14</div> -->
+    </div>
+    </body>
+</html>
