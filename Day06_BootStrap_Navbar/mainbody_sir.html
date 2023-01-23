@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap component</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+		/>
+		<style>
+			.logo-img {
+				height: 30px;
+			}
+			.text-small {
+				font-size: 0.8rem;
+			}
+			.user-img {
+				height: 42px;
+			}
+		</style>
+	</head>
+	<body class="bg-primary-subtle">
+		<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" style="margin-left: 8rem" href="#">
+					<img src="Images/logo.png" class="logo-img me-2" />
+					MyWeb
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#mynav"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse justify-content-end"
+					id="mynav"
+				>
+					<div class="navbar-nav">
+						<a
+							class="nav-link text-center lh-sm active p-0 px-3"
+							href="#"
+						>
+							<div><i class="bi bi-house-door fs-4"></i></div>
+							<div class="text-small">Home</div>
+						</a>
+						<a
+							class="nav-link text-center lh-sm active p-0 px-3"
+							href="#"
+						>
+							<div><i class="bi bi-speedometer2 fs-4"></i></div>
+							<div class="text-small">Dashboard</div>
+						</a>
+						<a
+							class="nav-link text-center lh-sm active p-0 px-3"
+							href="#"
+						>
+							<div><i class="bi bi-table fs-4"></i></div>
+							<div class="text-small">Orders</div>
+						</a>
+						<a
+							class="nav-link text-center lh-sm active p-0 px-3"
+							href="#"
+						>
+							<div><i class="bi bi-grid fs-4"></i></div>
+							<div class="text-small">Products</div>
+						</a>
+						<a
+							class="nav-link text-center lh-sm active p-0 px-3"
+							href="#"
+						>
+							<div><i class="bi bi-person-circle fs-4"></i></div>
+							<div class="text-small">Customers</div>
+						</a>
+						<div class="nav-link active p-0 px-4">
+							<div class="dropdown">
+								<img
+									src="Images/user.jpg"
+									class="user-img rounded-circle dropdown-toggle"
+									data-bs-toggle="dropdown"
+								/>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li class="dropdown-item text-small">Profile</li>
+									<li class="dropdown-item text-small">Projects</li>
+									<li class="dropdown-item text-small">Setting</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="container-fluid">
+			<div class="row justify-content-center py-5 bg-white shadow">
+				<div class="col-10">
+					<div class="row border-bottom">
+						<div class="col fs-3">
+							Features with title
+						</div>
+					</div>
+					<div class="row mt-3">
+						<div class="col-6 align-self-center">
+							<p class="fs-3 fw-bolder">Left-aligned title explaining these awesome features</p>
+							<p class="text-muted">
+								Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
+							</p>
+							<button class="btn btn-primary">Primary Button</button>
+						</div>
+						<div class="col-6">
+							<div class="row">
+								<div class="col-6">
+									<span class="text-white bg-primary fs-1 p-2 rounded-3">
+										<i class="bi bi-alarm"></i>
+									</span>
+									<div class="fs-4 fw-bold">Featured title</div>
+									<p class="text-muted">Paragraph of text beneath the heading to explain the heading.</p>
+								</div>
+								<div class="col-6">
+									<span class="text-white bg-primary fs-1 p-2 rounded-3">
+										<i class="bi bi-house-door"></i>
+									</span>
+									<div class="fs-4 fw-bold">Featured title</div>
+									<p class="text-muted">Paragraph of text beneath the heading to explain the heading.</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6">
+									<span class="text-white bg-primary fs-1 p-2 rounded-3">
+										<i class="bi bi-speedometer2"></i>
+									</span>
+									<div class="fs-4 fw-bold">Featured title</div>
+									<p class="text-muted">Paragraph of text beneath the heading to explain the heading.</p>
+								</div>
+								<div class="col-6">
+									<span class="text-white bg-primary fs-1 p-2 rounded-3">
+										<i class="bi bi-grid"></i>
+									</span>
+									<div class="fs-4 fw-bold">Featured title</div>
+									<p class="text-muted">Paragraph of text beneath the heading to explain the heading.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
