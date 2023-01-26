@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fruit Names</title>
+	<script type="text/javascript">
+			var fruits = []
+
+			for(let i = 0 ; i < 3; i++){
+				var fruitName = prompt("Enter fruit name")
+				fruits.push(fruitName) 
+			}
+
+			var htmlStr = "<ol>"
+
+			for(let i = 0 ; i < fruits.length; i++){
+				htmlStr = htmlStr + "<li>"+fruits[i]+"</li>"
+			}
+
+			htmlStr = htmlStr + "</ol>"
+			/*
+				<ol><li>Apple</li><li>Banana</li></ol>
+			*/
+			document.write(htmlStr)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

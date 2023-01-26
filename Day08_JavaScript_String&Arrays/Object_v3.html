@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+	<script type="text/javascript">
+		// var emps = [
+		// 	{name: "Sid",age: 14,salary: 1000,},
+		// 	{name: "Anubhav",age: 24,salary: 2000,},
+		// 	{name: "Rajat",age: 34,salary: 3000,},
+		// 	{name: "Neha",age: 44,salary: 4000,},
+		// ]
+
+		var emps =[]
+
+		for(var i = 0; i < 2; i++){
+			var n = prompt("Enter name");
+			var a = prompt("Enter age");
+			var s = prompt("Enter salary");
+			emps.push({
+				name: n,
+				age : a,
+				salary : s
+			})
+		}
+
+
+		var htmlStr = "<table border = 1>"
+
+		for(var i = 0 ;i < emps.length ; i++ ){
+			htmlStr = htmlStr + "<tr><td>"+emps[i].name+"</td><td>"+emps[i].age+"</td><td>"+emps[i].salary+"</td></tr>"
+		}
+
+		htmlStr = htmlStr + "</table>"
+		/*
+			<table border=1>
+				<tr><td>Sid</td><td>14</td><td>1000</td></tr>
+				<tr><td>Anubhav</td><td>24</td><td>2000</td></tr>
+				</table>
+				
+		*/
+
+		document.write(htmlStr)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

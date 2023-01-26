@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Remove Duplicates</title>
+    <script>
+        var str = prompt("Enter a string");
+        var arr = str.split("");
+        var count = 0;
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = 0; j < i; j++) {
+                if (arr[i] == arr[j]) {
+                    break;
+                }
+            }
+            if (j == i) {
+                arr[count++] = arr[i];
+            }
+        }
+        arr = arr.splice(arr, count);
+        document.write(arr.join(""));
+    </script>
+</head>
+<body>
+</body>
+
+</html>

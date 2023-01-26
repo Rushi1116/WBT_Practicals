@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Objects</title>
+		<script type="text/javascript">
+			var emp = {
+				name: "Siddhant",
+				age: 42,
+				salary: 1000,
+				contact: {
+					phone: 4654321,
+					email: "sid@gmail.com",
+					address: {
+						city: "Pune",
+						pin: 411008,
+						state: "MH",
+					},
+				},
+				hobbies: ["Reading", "Travling", "Cooking"],
+			};
+
+			console.log(emp.contact);
+			console.log(emp.contact.phone);
+			console.log(emp.contact["phone"]);
+			console.log(emp.hobbies[1]);
+			console.log(emp["contact"]["address"]["pin"]);
+			emp.contact.address.state = "MH";
+			emp.hobbies.push("Cooking");
+
+			var emps = [
+				{
+					name: "Sid",
+					age: 14,
+					salary: 1000,
+					hobbies: ["Reading"],
+					address: {
+						city: "Pune",
+						pin: 411008,
+						state: "MH",
+						country : "India"
+					},
+				},
+				{
+					name: "Anubhav",
+					age: 24,
+					salary: 3000,
+					hobbies: ["Cooking"],
+					address: {
+						city: "Pune",
+						pin: 411008,
+						state: "MH",
+					},
+				},
+				{
+					name: "Rajat",
+					age: 34,
+					salary: 4000,
+					hobbies: ["Traveling"],
+					address: {
+						city: "Pune",
+						pin: 411008,
+						state: "MH",
+					},
+				},
+				{
+					name: "Neha",
+					age: 44,
+					salary: 2000,
+					hobbies: [],
+					address: {
+						city: "Pune",
+						pin: 411008,
+						state: "MH",
+					},
+				},
+			];
+
+			console.log(emps[1]); //{name : "Anubhav", age : 24, salary : 3000},
+			console.log(emps[1].name); //Anubhav
+			console.log(emps[1]["name"]); //Anubhav
+			emps[3].hobbie.push("reading");
+		</script>
+	</head>
+	<body></body>
+</html>

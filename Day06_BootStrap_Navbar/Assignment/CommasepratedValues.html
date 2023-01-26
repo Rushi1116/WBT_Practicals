@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Comma seprated value addition</title>
+        <script>
+            var str = prompt("write a sequence of comma separated values <br> like 1,2,3,4");
+            var add = 0;
+            str = str.split(",");
+            for(let i = 0; i < str.length; i++){
+                    add = add + parseInt(str[i]);
+            }
+            document.write(add);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

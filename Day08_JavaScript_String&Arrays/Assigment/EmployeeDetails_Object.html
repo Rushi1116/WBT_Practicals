@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>EmployeeDetails</title>
+    <script>
+        var emp = [];
+        function userInput() {
+            for (let i = 0; i < 1; i++) {
+                var id = prompt("Enter Id");
+                var n = prompt("Enter Name");
+                var num = prompt("Enter phone number");
+                var sal = prompt("Enter salary")
+                emp.push({
+                    ID: id,
+                    Name: n,
+                    Phone: num,
+                    Salary : sal
+                })
+            }
+        }
+
+        function display(){
+            var htmlStr = "<table border = 1>"
+            for(let i = 0; i < emp.length; i++){
+                htmlStr = htmlStr + "<tr><td>" + emp[i].ID + "</td><td>" + emp[i].Name + "</td><td>" + 
+                    emp[i].Phone + "</td><td>" + emp[i].Salary + "</td></tr>"
+            }
+            htmlStr = htmlStr + "</table>"
+            document.write(htmlStr);
+        }
+
+        userInput();
+        display();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

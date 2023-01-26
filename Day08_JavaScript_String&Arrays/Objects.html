@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+	<script type="text/javascript">
+		var std = {} //Empty object
+
+		var std1 = {
+			name : "Siddhant",
+			age : 10,
+			marks : 100
+		}
+
+		var std2 = {
+			name : "Anubhav",
+			age : 11,
+			marks : 110
+		}
+
+		//Access properties
+		console.log(std1.name)
+		console.log(std2["name"])
+
+		std1.name = "Sid"
+		std1.age = 14
+		std2["name"] = "Anu"
+		std2["age"] = 14
+		console.log(std1)
+		console.log(std2)
+
+		//Add new property
+		std1.email = "sid@gmal.com"
+		std2["email"] = "anu@gmail.com"
+		console.log(std1)
+		console.log(std2)
+
+		//Delete the property
+		delete std1.name
+
+		console.log(std1)
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

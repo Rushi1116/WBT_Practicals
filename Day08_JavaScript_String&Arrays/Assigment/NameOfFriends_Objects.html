@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Name of Friends</title>
+    <script>
+
+
+        var friends = [];
+        function userInput() {
+            for (let i = 0; i < 3; i++) {
+                var name = prompt("Enter friend name");
+                friends.push({ friend: name });
+            }
+        }
+
+        function display() {
+            var htmlStr = "<ol>";
+            for (let i = 0; i < friends.length; i++) {
+                htmlStr = htmlStr + "<li>" + friends[i].friend + "</li>";
+            }
+            htmlStr = htmlStr + "</ol>";
+            document.write(htmlStr);
+        }
+
+        //calling function;
+        userInput();
+        display();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

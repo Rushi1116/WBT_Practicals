@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<script type="text/javascript">
+		
+		var arr = [] //empty array
+		var arr = ["Siddhant", "Anubhav", "Rajat",347,10.2,true]
+					// 0          1         2      3   4    5
+		//Access array length
+		console.log(arr.length)
+
+		//Access by index
+		console.log(arr[2])
+
+		//Functions
+		//Insert element into array at the end
+		arr.push("Neha")
+		console.log(arr)
+
+		//Insert at the begining of array
+		arr.unshift("Sid")
+		console.log(arr)
+
+		//Remove from the end
+		arr.pop()
+		console.log(arr)
+
+		//Remove from start
+		arr.shift()
+		console.log(arr)
+
+		//Remove from index
+		arr.splice(1,2)
+		console.log(arr)
+
+		//Insert at index
+		arr.splice(1,0, "Neha") //delete Count must be 0 for insert
+		console.log(arr)
+
+		arr.reverse()
+		console.log(arr)
+
+		console.log(arr.indexOf("Neha"))
+		console.log(arr.includes(347))
+
+		console.log(arr.join()) //string
+		console.log(arr.join("|")) //string
+		console.log(arr.join("xyz")) //string
+		console.log(arr.join(" ")) //string
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

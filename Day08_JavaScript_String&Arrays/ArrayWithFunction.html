@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		function palindrome(str){
+			var result = str.split("").reverse().join("")
+			return result == str
+		}
+
+
+		function removeDuplicateWords(str){
+			var arr = str.split(" ") //[This,is,Javascript]
+			for(let i = 0 ; i < arr.length; i++){
+				let idx = arr.lastIndexOf(arr[i])
+				if(i != idx ){
+					arr.splice(idx,1)
+				}
+			}
+			return arr.join(" ")
+		}
+
+
+		var x = "This is This Javascript"
+		if(palindrome(x)){
+			document.write("String is palindrome")
+		}else{
+			document.write("String is not palindrome")
+		}
+
+		document.write(removeDuplicateWords(x))
+			
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

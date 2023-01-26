@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <script>
+            var movie = [];
+            function userInput(){
+                for(let i = 0; i < 3; i++){
+                    var n = prompt("enter movie name");
+                    var p = prompt("enter price");
+                    var s = prompt("enter seat");
+                    movie.push({
+                    Name: n,
+                    Price: p,
+                    Seat : s
+                })
+                }
+            }
+            function display(){
+                var htmlStr = "<table border = 1>"
+                for(let i = 0; i < movie.length; i++){
+                    htmlStr = htmlStr + "<tr><td>" + movie[i].Name + "</td><td>" + movie[i].Price +
+                        "</td><td>" + movie[i].Seat + "</td></tr>"
+                }
+                htmlStr = htmlStr + "</table>";
+                document.write(htmlStr);
+            }
+            userInput();
+            display();
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
