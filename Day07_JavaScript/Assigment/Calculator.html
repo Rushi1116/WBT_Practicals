@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculator</title>
+        <script>
+            alert("This is Calculator page\n\n"+
+            "Just enter the numbers & operator to find answer");
+
+            var a =  parseInt(prompt("Enter first no."));
+            var b =  parseInt(prompt("Enter second no."));
+            var op = prompt("Enter the operator");
+
+            if(op == "+"){
+                document.write(a+b);
+            }
+            else if(op == "-"){
+                document.write(a-b);
+            }
+            else if(op == "*"){
+                document.write(a*b);
+            }
+            else if(op == "/"){
+                document.write(a/b);
+            }
+            else{
+                document.write("Input wrong, try again!!!");
+            }
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

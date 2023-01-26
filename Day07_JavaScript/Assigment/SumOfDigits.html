@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <script>
+            var num = parseInt(prompt("Enter 5 digit no."));
+            var temp = num;
+            var total = 0;
+            
+            while(temp != 0)
+            {
+             total += temp % 10;
+             temp = parseInt(temp/10);
+            }
+            document.write("The sum of digit " +num +" is " +total);
+            </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

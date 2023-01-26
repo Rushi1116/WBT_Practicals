@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fibbonaci Series</title>
+        <script>
+            let n = parseInt(prompt("Enter nth term to run fibbo series!"));
+            let a = 0, b=1;
+            for(let i = 1; i <= n; i++){
+                document.write(a+" ");
+                let sum = a + b;
+                a = b;
+                b = sum;     
+            }
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
