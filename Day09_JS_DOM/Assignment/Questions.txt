@@ -7,3 +7,11 @@ Movies property : Movie Name,Price,Seat
 
 4.Create a web page and take 3 employee details and show in table
 Employee property : Id,Name,Phone,Salary
+________________________________________________________________________________________
+1.Write js code to read movie data from user and show in table(use bootstrap)
+Movie Fields : movieName, actor, release,Movie type(2d,3d,IMAX)(use checkbox)
+
+2.4.Create a web page and take 3 employee details and show in table (Use bootstrap)
+Employee property : Id,Name,Phone,Salary,Date of birth,Gender,Country(Select Tag),Description(Text area) 
+
+3.Use Assignment 2 and complete question 2 and show data in table(Use bootstrap)
