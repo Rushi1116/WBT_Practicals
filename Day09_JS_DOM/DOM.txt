@@ -1,0 +1,38 @@
+1.Browser gets HTML
+2.Reads HTML document
+3.Create DOM(JS Object)
+4.After creaing all DOM then draw(render) the page from DOM
+
+<html>
+	<head>
+		<title></title>
+		<script></script>
+	</head>
+	<body>
+		<h1>Heading</h1>
+		<p>This is para</p>
+	</body>
+</html>
+
+document->{
+	...
+	children:[{HTML DOM
+		....
+		children :[
+		{HEAD DOM
+			children : [{TITLE DOM
+					children : []
+			}]
+		},
+		{BODY DOM
+			children : [{H1}, {P}]
+		}]
+		....
+	}]
+	...
+}
+
+document.getElementById("id") -> DOM 
+document.getElementsByClassName("class") -> Array of DOM
+document.getElementsByTagName() -> Array of DOM
+document.getElementsByName() -> Array of DOM

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Movie Table</title>
+        <script>
+            var movie = [];
+            function userInput(){
+                    var n = document.getElementById("name").value
+                    var p = document.getElementById("price").value
+                    var s =document.getElementById("seat").value
+                    movie.push({
+                    Name: n,
+                    Price: p,
+                    Seat : s
+                })
+            }
+            function display(){
+                var htmlStr = ""
+                for(let i = 0; i < movie.length; i++){
+                    htmlStr = htmlStr + "<tr><td>" + movie[i].Name + "</td><td>" + movie[i].Price +
+                        "</td><td>" + movie[i].Seat + "</td></tr>"
+                }
+                document.getElementById("table").innerHTML = htmlStr;
+            }
+        </script>
+    </head>
+    <body>
+    <input type="text" id="name" placeholder="Enter movie name">
+    <input type="text" id="price" placeholder="Enter price">
+    <input type="text" id="seat" placeholder="Enter seat no.">
+    <button onclick="userInput()">Save</button>
+    <button onclick="display()">Display</button>
+    <table border = 1 id="table"></table>
+    </body>
+</html>

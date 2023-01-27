@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Movie Table</title>
+        <script>
+            var emp = [];
+            function userInput(){
+                var i = document.getElementById("id").value
+                var n = document.getElementById("name").value
+                var p = document.getElementById("phone").value
+                var s =document.getElementById("salary").value
+                    emp.push({
+                        ID : i,
+                        Name: n,
+                        Phone: p,
+                        Salary : s
+                    })
+            }
+            function display(){
+                var htmlStr = ""
+                for(let i = 0; i < emp.length; i++){
+                    htmlStr += "<tr><td>" + emp[i].ID + "</td><td>" + emp[i].Name + "</td><td>" + emp[i].Phone +
+                        "</td><td>" + emp[i].Salary + "</td></tr>"
+                }
+                document.getElementById("table").innerHTML = htmlStr;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="id" placeholder="Enter emp id">
+    <input type="text" id="name" placeholder="Enter emp name">
+    <input type="text" id="phone" placeholder="Enter phone">
+    <input type="text" id="salary" placeholder="Enter Salary">
+    <button onclick="userInput()">Save</button>
+    <button onclick="display()">Display</button>
+    <table border = 1 id="table"></table>
+    </body>
+</html>

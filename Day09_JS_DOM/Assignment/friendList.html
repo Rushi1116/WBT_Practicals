@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FriendList</title>
+        <script>
+            var friends = [];
+            function save(){
+                var name = document.getElementById("name").value
+                friends.push({
+                    friendName : name,
+                })
+            }
+            function display(){
+                var htmlStr = "";
+                    for(let i = 0; i < friends.length; i++){
+                        htmlStr+= "<li>"+ friends[i].friendName + "</li>";
+                    }
+                    document.getElementById("list").innerHTML = htmlStr
+            }
+        </script>
+    </head>
+    <body>
+    Friend Name : <input type="text" id="name" placeholder="Enter friend name">
+    <button onclick="save()">Save</button>
+	<button onclick="display()">Display</button>
+    <ol id="list"></ol>
+    </body>
+</html>
