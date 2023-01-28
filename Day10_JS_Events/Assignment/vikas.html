@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>movies events</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		body{
+			background-color: skyblue;
+		}
+	</style>
+	<script type="text/javascript">
+		var stds=[]
+
+		function validateMovieName(){
+			var moviename = document.getElementById("moviename").value
+			if(moviename.length > 5){
+				document.getElementById("moviename_err").innerHTML=""
+				return moviename
+			}else{
+				document.getElementById("moviename_err").innerHTML="MovieName must be 5 chars"
+				return false
+			}
+		}
+        function validateActor(){
+			var actor = document.getElementById("actor").value
+			if(actor.length > 3){
+				document.getElementById("actor_err").innerHTML=""
+				return actor
+			}else{
+				document.getElementById("actor_err").innerHTML="Actor must be 3 chars"
+				return false
+			}
+		}
+
+	
+
+
+
+
+		function save(){	
+			// var name = document.getElementById("name").value
+			// var email = document.getElementById("email").value
+			var moviename = validateMovieName() //Siddhant or false
+			var actor = validateActor() 
+			var release = document.getElementById("release").value
+			var movietypeArr = document.getElementsByName("movietype") //[ {}, {}, {}]
+			var movietype = ""
+			if(movietypeArr[0].checked){
+				movietype = movietypeArr[0].value
+			}else if(movietypeArr[1].checked){
+				movietype = movietypeArr[1].value
+			}else if(movietypeArr[2].value){
+				movietype = movietypeArr[2].value
+			}
+
+			if(moviename && actor && release && movietype){
+				stds.push({
+					moviename : moviename,
+					actor : actor,
+					release : release,
+					movietype : movietype,
+				})	
+			}
+			
+		}
+
+		function display(){
+			var htmlStr = ""
+			for (var i = 0; i < stds.length; i++) {
+				htmlStr +=  `
+						<tr>
+							<td>${stds[i].moviename}</td>
+							<td>${stds[i].actor}</td>
+							<td>${stds[i].release}</td>
+							<td>${stds[i].movietype}</td>
+						</tr>`
+
+			}
+			document.getElementById("table").innerHTML = htmlStr
+		}
+
+
+		
+	</script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row align-items-center justify-content-evenly" style="height :99vh">
+			<div class="col-4 p-5 shadow ">
+				<div class="mb-3">
+					<input type="text" class="form-control form-control-sm" id="moviename" placeholder="Enter MovieName" onblur="validateMovieName()">
+					<span id="moviename_err" class="text-danger fst-italic" style="font-size: 0.8rem;"></span>
+				</div>
+				<div class="mb-3">
+					<input type="text" class="form-control form-control-sm" id="actor" placeholder=" actor"  onblur="validateActor()">
+					<span id="actor_err" class="text-danger fst-italic" style="font-size: 0.8rem;"></span>
+				</div>
+				<div class="mb-3">
+					<input type="date" class="form-control form-control-sm" id="release" placeholder="Enter release">
+				</div>
+				<div class="mb-3">
+					movietype :
+					<input type="radio" name="movietype" value="2d" checked> 2d
+					<input type="radio" name="movietype" value="3d"> 3d
+					<input type="radio" name="movietype" value="IMAX"> IMAX
+				</div>
+				<div class="text-center">
+					<button class="btn btn-primary btn-sm" onclick="save()">Save</button>
+					<button class="btn btn-primary btn-sm ms-2" onclick="display()">Display</button>
+				</div>
+			</div>
+			<div class="col-6">
+				<table class="table table-stripped table-hover">
+					<thead>
+						<tr class="table-secondary">
+							<th>MovieName</th>
+							<th>Actor</th>
+							<th>Release</th>
+							<th>Movietype</th>
+						</tr>
+					</thead>
+					<tbody id="table">
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

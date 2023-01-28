@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+	<style type="text/css">
+		.para{
+			display : none;
+		}
+	</style>
+	<script type="text/javascript">
+		
+		function save(){
+			console.log("Button Clicked")
+		}
+
+		function func1(){
+			console.log("This is func1 handler on onmouseover")
+		}
+
+		function func2(){
+			console.log("Mouse entered")
+		}
+
+		function func3(){
+			console.log("Mouse left")
+		}
+
+		function func4(){
+			console.log("user selected something")
+		}
+
+
+		function func5(){
+			console.log("input tag focused")
+		}
+
+		function func6(){
+			console.log("blur event fired ")
+		}
+
+
+		function magnify(){
+			var para = document.getElementById("para")
+			para.style.fontSize = "1.4rem"
+		}
+
+		function resetMagnify(){
+			var para = document.getElementById("para")
+			para.style.fontSize = "1rem"	
+		}
+
+		function togglePara(){
+			var para = document.getElementById("para")
+			if(para.style.display == "none"){
+				para.style.display = "block"
+				document.getElementById("paraBtn").innerHTML = "Hide Para"
+			}else{
+				para.style.display = "none"
+				document.getElementById("paraBtn").innerHTML = "Show Para"
+			}
+		}
+
+
+	</script>
+
+</head>
+<body>
+	<input type="text" id="name" placeholder="Enter name" onfocus="func5()" onblur="func6()">
+	<button id="btn">Save</button>
+	<br>
+	<div style="height:100px;width :100px;border:1px solid black" onclick="save()" onmouseover="func1()" onmouseenter="func2()" onmouseleave="func3()">		
+	</div>
+	<button id="paraBtn" onclick="togglePara()">Show para</button>
+	<p id="para" onmouseover="magnify()" onmouseleave="resetMagnify()" class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<script type="text/javascript">
+		document.getElementById("btn").addEventListener("click",save)
+		document.getElementById("btn").addEventListener("mouseover",func1)
+	</script>
+</body>
+</html>

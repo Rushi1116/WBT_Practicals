@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Students</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		body{
+			background-color: lightgreen;
+		}
+	</style>
+	<script type="text/javascript">
+		var stds=[]
+
+		function validateName(){
+			var name = document.getElementById("name").value
+			if(name.length > 5){
+				document.getElementById("name_err").innerHTML=""
+				return name
+			}else{
+				document.getElementById("name_err").innerHTML="Name must be 5 chars"
+				return false
+			}
+		}
+
+		function validateEmail(){
+			var email = document.getElementById("email").value
+			if(email.endsWith("cdac.com")){
+				document.getElementById("email_err").innerHTML = ""
+				return email
+			}else{
+				document.getElementById("email_err").innerHTML = "Email must have domain cdac.com"
+				return false
+			}
+		}
+
+
+
+
+		function save(){	
+			// var name = document.getElementById("name").value
+			// var email = document.getElementById("email").value
+			var name = validateName() //Siddhant or false
+			var email = validateEmail() 
+			var age = document.getElementById("age").value
+			var genderArr = document.getElementsByName("gender") //[ {}, {}, {}]
+			var gender = ""
+			if(genderArr[0].checked){
+				gender = genderArr[0].value
+			}else if(genderArr[1].checked){
+				gender = genderArr[1].value
+			}else if(genderArr[2].value){
+				gender = genderArr[2].value
+			}
+
+			if(name && email && age && gender){
+				stds.push({
+					name : name,
+					email : email,
+					age : age,
+					gender : gender,
+				})	
+			}
+			
+		}
+
+		function display(){
+			var htmlStr = ""
+			for (var i = 0; i < stds.length; i++) {
+				htmlStr +=  `
+						<tr>
+							<td>${stds[i].name}</td>
+							<td>${stds[i].email}</td>
+							<td>${stds[i].age}</td>
+							<td>${stds[i].gender}</td>
+						</tr>`
+
+			}
+			document.getElementById("table").innerHTML = htmlStr
+		}
+
+
+		
+	</script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row align-items-center justify-content-evenly" style="height :99vh">
+			<div class="col-4 p-5 shadow ">
+				<div class="mb-3">
+					<input type="text" class="form-control form-control-sm" id="name" placeholder="Enter Name" onblur="validateName()">
+					<span id="name_err" class="text-danger fst-italic" style="font-size: 0.8rem;"></span>
+				</div>
+				<div class="mb-3">
+					<input type="email" class="form-control form-control-sm" id="email" placeholder="Enter email"  onblur="validateEmail()">
+					<span id="email_err" class="text-danger fst-italic" style="font-size: 0.8rem;"></span>
+				</div>
+				<div class="mb-3">
+					<input type="age" class="form-control form-control-sm" id="age" placeholder="Enter Age">
+				</div>
+				<div class="mb-3">
+					Gender :
+					<input type="radio" name="gender" value="male" checked> Male
+					<input type="radio" name="gender" value="female"> Male
+					<input type="radio" name="gender" value="others"> Others
+				</div>
+				<div class="text-center">
+					<button class="btn btn-primary btn-sm" onclick="save()">Save</button>
+					<button class="btn btn-primary btn-sm ms-2" onclick="display()">Display</button>
+				</div>
+			</div>
+			<div class="col-6">
+				<table class="table table-stripped table-hover">
+					<thead>
+						<tr class="table-secondary">
+							<th>Name</th>
+							<th>Email</th>
+							<th>Age</th>
+							<th>Gender</th>
+						</tr>
+					</thead>
+					<tbody id="table">
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
