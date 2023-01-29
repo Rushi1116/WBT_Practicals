@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prototyping</title>
+	<script type="text/javascript">
+		
+		function Person(name, address,age){
+			this.name = name
+			this.address = address
+			this.age = age
+			// this.getName = function(){
+			// 	return name
+			// }
+			// this.setName = function(){
+			// 	this.name = name
+			// }
+		}
+
+		function Employee(empId, dept,salary ){
+			//this.person = new Person(name, adress,age)
+			this.empId = empId
+			this.dept = dept
+			this.salary = salary
+		}
+
+		function CreateEmployee(name,address,age,empId, dept,salary ){
+			var temp = new Employee(empId, dept,salary )
+			Object.setPrototypeOf(temp,new Person(name,address,age))
+			return temp
+		}
+
+		// var emp1 = new Employee("Siddhant", "Pune", 23, 1, "Accounting", 1000)
+		// var emp2 = new Employee("Anubhav", "Patna", 23, 1, "Devvelopment", 1000)
+		// var emp3 = new Employee("Neha", "Delhi", 23, 1, "Testing", 1000)
+
+		var emp1 = CreateEmployee("Siddhant", "Pune", 23, 1, "Accounting", 1000)
+		var emp2 = CreateEmployee("Anubhav", "Patna", 23, 1, "Development", 1000)
+		var emp3 = CreateEmployee("Neha", "Delhi", 23, 1, "Testing", 1000)
+		console.log(emp1)
+		console.log(emp2)
+		console.log(emp3)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

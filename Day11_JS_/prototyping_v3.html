@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		function ArrayFunc(){
+			this.sum = function(){
+				let result = 0
+				for (var i = 0; i < this.array.length; i++) {
+					if(!isNaN(this.array[i])){
+						result = result + this.array[i]
+					}
+				}
+				return result
+			}
+			this.push = function(num){
+				if(!isNaN(num)){
+					this.array.push(num)
+				}else{
+					console.log("Only Numbers")
+				}
+			}
+		}
+
+
+		function NumArray(){
+			this.array = []
+		}
+
+		NumArray.prototype = new ArrayFunc()
+
+		var n1 = new NumArray()
+		var n2 = new NumArray()
+		console.log(n1)
+		console.log(n2)
+
+
+		// var n1 = {
+		// 	array : [],
+		// 	sum : function(){
+		// 		let result = 0
+		// 		for (var i = 0; i < this.array.length; i++) {
+		// 			if(!isNaN(this.array[i])){
+		// 				result = result + this.array[i]
+		// 			}
+		// 		}
+		// 		return result
+		// 	},
+		// 	push : function(num){
+		// 		if(!isNaN(num)){
+		// 			this.array.push(num)
+		// 		}else{
+		// 			console.log("Only Numbers")
+		// 		}
+		// 	}
+		// }
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		class Person{
+			constructor(name,address){
+				this.name = name 
+				this.address = address
+			}
+		}
+
+		class Employee extends Person{
+			constructor(name,address,empId,dept, salary){
+				super(name,address) // Compulsary if performing inheritance
+				this.empId = empId
+				this.dept = dept
+				this.salary = salary
+			}
+
+			getTax(){
+				return this.tax * 0.10
+			}
+		}
+
+		var emp1 = new Employee("Siddhant", "Pune", 1, "Accounting", 10000)
+		var emp2 = new Employee("Anubhav", "Pune", 1, "Accounting",20000)
+		console.log(emp1)
+		console.log(emp2)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Type of functions</title>
+	<script type="text/javascript">
+
+		//Normal function 
+		function sum(a,b){
+			var result  = a + b
+			return result
+		}
+
+		var result = sum(10,20)
+
+		//Anonymous function
+		//function without name
+		//Use this inside object or callback functions
+		 //or assign to variable
+		var sum = function(a,b){
+			var result  = a + b
+			return result
+		}
+
+		var result = sum(10,20)
+
+		//Arrow function
+		//Use as callback functions or assign to variable
+		// var sum = (a,b) => {
+		// 	var result  = a + b
+		// 	return result
+		// }
+
+		var sum = (a,b) => a + b
+			
+		var result = sum(10,20)
+
+		var sqr = num => num * num
+
+		var result = sqr(10)
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

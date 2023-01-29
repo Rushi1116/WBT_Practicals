@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		function Calc(){
+			// sub : function(a,b){
+			// 	return a - b
+			// },
+			// sum : function(a,b){
+			// 	return a + b
+			// },
+			// mul : function(a,b){
+			// 	return a * b
+			// },
+			this.sqr = function(){
+				// console.log(this)
+				return this.num * this.num
+			},
+			this.cube= function(){
+				return this.num ** 3
+			}
+		}
+		// console.log(calc.sum(10,20))
+		// console.log(calc.sub(10,20))
+
+		function Number(num){
+			this.num = num
+		}
+
+		Number.prototype = new Calc()
+		var num1 = new Number(10)
+		var num2 = new Number(20)
+		console.log(num1)
+		console.log(num2)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

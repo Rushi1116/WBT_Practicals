@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student</title>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+		
+		var stds=[]
+
+		function save(){	
+			//var name = document.getElementById("name").value
+			var name = $("#name").val()
+			//var email = document.getElementById("email").value
+			var email = $("#email").val()
+			//var age = document.getElementById("age").value
+			var age = $("#age").val()
+			//var dob = document.getElementById("dob").value
+			var dob = $("#dob").val()
+			
+			// var genderArr = document.getElementsByName("gender")
+			// var gender = ""
+			// if(genderArr[0].checked){
+			// 	gender = genderArr[0].value
+			// }else if(genderArr[1].checked){
+			// 	gender = genderArr[1].value
+			// }else if(genderArr[2].value){
+			// 	gender = genderArr[2].value
+			// }
+			var gender = $('.gender:checked').val()
+
+			// var langArr = document.getElementsByName("lang")
+			// var lang = []
+			// if(langArr[0].checked){
+			// 	lang.push(langArr[0].value)
+			// }
+			// if(langArr[1].checked){
+			// 	lang.push(langArr[1].value)
+			// }
+			// if(langArr[2].checked){
+			// 	lang.push(langArr[2].value)
+			// }
+			var lang = []
+			//[{},{}]
+			$("input[name=lang]:checked").each(function(){
+				lang.push($(this).val())
+			})
+		
+			//var state = document.getElementById("state").value
+			var state = $("#state").val()
+
+			stds.push({
+				name : name,
+				email : email,
+				age : age,
+				dob: dob,
+				gender : gender,
+				lang :lang,
+				state : state
+			})
+		}
+
+		function display(){
+			var htmlStr = ""
+			for (var i = 0; i < stds.length; i++) {
+				// htmlStr += "<tr><td>" + stds[i].name + "</td><td>" + stds[i].email + "</td><td>" + stds[i].age + "</td></tr>"
+				htmlStr +=  `
+						<tr>
+							<td>${stds[i].name}</td>
+							<td>${stds[i].email}</td>
+							<td>${stds[i].age}</td>
+							<td>${stds[i].dob}</td>
+							<td>${stds[i].gender}</td>
+							<td>${stds[i].lang}</td>
+							<td>${stds[i].state}</td>
+						</tr>`
+
+			}
+			//document.getElementById("table").innerHTML = htmlStr
+			$("#table").html(htmlStr)
+		}
+
+
+		$(document).ready(function(){
+			$("#saveBtn").click(save)
+			$("#displayBtn").click(display)
+		})
+
+
+	</script>
+</head>
+<body>
+	Enter name : <input type="text" id="name" placeholder="Enter name">
+	<br>
+	Enter email : <input type="email" id="email" placeholder="Enter email">
+	<br>
+	Enter age : <input type="text" id="age" placeholder="Enter age">
+	<br>
+	Enter date of birth : <input type="date" id="dob">
+	<br>
+	Gender :<input type="radio" name="gender" class="gender" value="male">Male
+			<input type="radio" name="gender" class="gender" value="female">Female
+			<input type="radio" name="gender" class="gender" value="others">Others
+	<br>
+	Programming Language: <input type="checkbox" name="lang" value="python">Python
+	<input type="checkbox" name="lang" value="nodejs">Nodejs
+	<input type="checkbox" name="lang" value="java">Java
+	<br>
+	State : <select id="state">
+		<option value="mh">MH</option>
+		<option value="mp">MP</option>
+		<option value="up">UP</option>
+		<option value="tn">TN</option>
+	</select>
+	<br>
+	<button id="saveBtn">Save</button>
+	<button id="displayBtn">Display</button>
+	<table border=1 >
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Age</th>
+				<th>Dob</th>
+				<th>Gender</th>
+				<th>Language</th>
+				<th>State</th>
+			</tr>
+		</thead>
+		<tbody id="table">
+			
+		</tbody>
+	</table>
+</body>
+</html>
