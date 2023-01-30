@@ -1,0 +1,1 @@
+Writing dummy data for file ReadFS.js file, txt file data will be shown on Terminal
