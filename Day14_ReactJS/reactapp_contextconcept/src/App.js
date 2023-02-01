@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+// import Calculator from "./Components/Calculator.js"
+// import FriendList from "./Components/FriendList.js"
+// import Friends from "./Components/Friends.js";
+import Home from "./ContextDemo/Home.js"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/*<Calculator/>*/}
+      {/*<FriendList/>*/}
+      {/*<Friends />*/}
+      <Home/>
     </div>
   );
 }

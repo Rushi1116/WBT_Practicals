@@ -2,8 +2,6 @@
 // import FriendList from "./Components/FriendList.js"
 // import Friends from "./Components/Friends.js";
 import Home from "./Friends/Home.js"
-// import Home from "./ContextDemo/Home.js"
-
 function App() {
   return (
     <div>
@@ -11,7 +9,6 @@ function App() {
       {/*<FriendList/>*/}
       {/*<Friends />*/}
       <Home/>
-      {/* <Home/> */}
     </div>
   );
 }
