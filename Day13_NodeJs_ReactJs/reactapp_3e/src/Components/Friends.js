@@ -31,4 +31,4 @@ function Friends(){
     </div>);
 }
 
-export default Friends; 
+export default Friends;  
